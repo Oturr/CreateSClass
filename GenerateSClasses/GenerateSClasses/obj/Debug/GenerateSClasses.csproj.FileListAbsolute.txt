@@ -1,0 +1,7 @@
+C:\Users\Ars\Desktop\0\GenerateSClasses\GenerateSClasses\bin\Debug\GenerateSClasses.exe.config
+C:\Users\Ars\Desktop\0\GenerateSClasses\GenerateSClasses\bin\Debug\GenerateSClasses.exe
+C:\Users\Ars\Desktop\0\GenerateSClasses\GenerateSClasses\bin\Debug\GenerateSClasses.pdb
+C:\Users\Ars\Desktop\0\GenerateSClasses\GenerateSClasses\obj\Debug\GenerateSClasses.csproj.AssemblyReference.cache
+C:\Users\Ars\Desktop\0\GenerateSClasses\GenerateSClasses\obj\Debug\GenerateSClasses.csproj.CoreCompileInputs.cache
+C:\Users\Ars\Desktop\0\GenerateSClasses\GenerateSClasses\obj\Debug\GenerateSClasses.exe
+C:\Users\Ars\Desktop\0\GenerateSClasses\GenerateSClasses\obj\Debug\GenerateSClasses.pdb
