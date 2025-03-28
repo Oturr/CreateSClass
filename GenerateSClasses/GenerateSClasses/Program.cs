@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace GenerateSClasses
 	{
 		static void Main(string[] args)
 		{
-			string outputPath = @"C:\Users\user\Desktop\0\GeneratedClasses";
+			string outputPath = @"C:\Users\Ars\Desktop\0\GeneratedClasses";
 
 			bool exitState = true;
 			while (exitState)
@@ -41,7 +42,7 @@ namespace GenerateSClasses
 				string fInd = Console.ReadLine();
 
 
-				string path = $@"C:\Users\user\Desktop\0\GeneratedClasses\{className}.txt";
+				string path = $@"C:\Users\Ars\Desktop\0\GeneratedClasses\{className}.txt";
 
 				string codeInnards = $@"using System;
 using System.Collections.Generic;
@@ -128,18 +129,18 @@ static public bool Delete{methodName}(int index)
 {{
 	try
 	{{
-		myCommand.CommandText = $@""select {fInd} from {fTab} where {tabInd}"";
+		myCommand.CommandText = $@""select {fInd} from {fTab} where {tabInd}={{index}}"";
 		object result = myCommand.ExecuteScalar();
-		if (result == null)
+		if (result != null)
 		{{
-			myCommand.CommandText = $@""delete from {bdTab} where {tabInd}={{index}}"";
-			myCommand.ExecuteNonQuery();
-			return true;
-		}}
-		MessageBox.Show(""Уже используется {sErMsg}"",
+			MessageBox.Show(""Уже используется {sErMsg}"",
 			""Ошибка"",
 			MessageBoxButtons.OK, MessageBoxIcon.Error);
-		return false;
+			return false;
+		}}
+		myCommand.CommandText = $@""delete from {bdTab} where {tabInd}={{index}}"";
+		myCommand.ExecuteNonQuery();
+		return true;
 	}}
 	catch
 	{{
